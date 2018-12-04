@@ -1,4 +1,5 @@
 rootProject.name = 'techdevguide'
 include 'LongestWordInDictionary'
 include 'SelectionSort'
+include 'Substring'
 
