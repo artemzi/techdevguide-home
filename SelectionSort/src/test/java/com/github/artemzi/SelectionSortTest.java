@@ -4,9 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 public class SelectionSortTest {
@@ -34,13 +32,11 @@ public class SelectionSortTest {
     }
 
     private int[] random(int count){
-        List<Integer> result = new ArrayList<>();
+        int[] result = new int[count+1];
         Random rnd = new Random();
         for(int i = 0; i < count; i++){
-            if(Math.random() > 0.5){
-                result.add(rnd.nextInt());
-            }
+            result[i] = rnd.nextInt();
         }
-        return result.stream().mapToInt(i->i).toArray();
+        return result;
     }
 }
